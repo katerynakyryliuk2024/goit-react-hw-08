@@ -1,15 +1,15 @@
-import { Navlink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import css from "./Navigation.module.css";
 
 export default function Navigation() {
   return (
     <nav>
-      <Navlink className={css.link} to="/">
+      <NavLink className={css.link} to="/">
         Home
-      </Navlink>
-      <Navlink className={css.link} to="/contacts">
+      </NavLink>
+      <NavLink className={css.link} to="/contacts">
         Contacts
-      </Navlink>
+      </NavLink>
     </nav>
   );
 }
