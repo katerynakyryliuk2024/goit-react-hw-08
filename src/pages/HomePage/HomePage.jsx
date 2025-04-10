@@ -1,11 +1,12 @@
-import { AiFillPhone } from "react-icons/ai";
+import { GrPhone } from "react-icons/gr";
+import PageTitle from "../../components/PageTitle/PageTitle";
 
 export default function HomePage() {
   return (
     <div>
-      <p>
-        Contact List manager Welcome Page <AiFillPhone />{" "}
-      </p>
+      <PageTitle>
+        Contact List manager Welcome Page <GrPhone />
+      </PageTitle>
     </div>
   );
 }
