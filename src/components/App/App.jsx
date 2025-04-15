@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { refreshUser } from "../../redux/auth/operations";
 import { selectIsRefreshing } from "../../redux/auth/selectors";
+import { Toaster } from "react-hot-toast";
 
 const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
 const RegisterPage = lazy(() =>
@@ -27,6 +28,7 @@ export default function App() {
   ) : (
     <Layout>
       <Suspense fallback={null}>
+        <Toaster />
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/register" element={<RegisterPage />}></Route>
