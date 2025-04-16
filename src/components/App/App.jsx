@@ -32,17 +32,24 @@ export default function App() {
         <Toaster />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <RestrictedRoute
-            component={
-              <Route
-                path="/login"
-                element={<LoginPage />}
-                redirectTo='/contacts"'
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                component={<RegisterPage />}
+                redirectTo="/contacts"
               />
             }
           />
-
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute
+                component={<LoginPage />}
+                redirectTo="/contacts"
+              />
+            }
+          />
           <Route path="/contacts" element={<ContactsPage />} />
         </Routes>
       </Suspense>
