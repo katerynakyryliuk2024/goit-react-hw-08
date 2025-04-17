@@ -5,6 +5,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import { selectLoading } from "../../redux/contacts/selectors";
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contacts/operations";
+import SearchBox from "../../components/SearchBox/SearchBox";
 
 export default function ContactsPage() {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ export default function ContactsPage() {
       <PageTitle>Your Contacts</PageTitle>
       <ContactForm />
       <div>{isLoading && "Request in progress..."}</div>
+      <SearchBox />
       <ContactList />
     </div>
   );
